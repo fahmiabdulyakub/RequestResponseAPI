@@ -4,3 +4,4 @@ export * from './display';
 export * from './reducer';
 export * from './server';
 export * from './dummyData';
+export * from './image';

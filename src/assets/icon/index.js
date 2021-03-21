@@ -6,6 +6,9 @@ import ICCheck from './ICCheck.svg';
 import ICCalender from './ICCalendar.svg';
 import ICChevron from './ICChevron.svg';
 import ICUser from './ICUser.svg';
+import ICCamera from './ICCamera.svg';
+import ICFolder from './ICFolder.svg';
+import ICCancel from './ICCancel.svg';
 export {
   ICEmail,
   ICBack,
@@ -15,4 +18,7 @@ export {
   ICCalender,
   ICChevron,
   ICUser,
+  ICCamera,
+  ICFolder,
+  ICCancel,
 };

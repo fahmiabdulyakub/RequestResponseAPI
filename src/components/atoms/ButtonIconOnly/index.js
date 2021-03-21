@@ -11,6 +11,7 @@ const ButtonIconOnly = ({
   borderWidth,
   borderColor,
   disabled,
+  shadow,
 }) => {
   return (
     <TouchableOpacity
@@ -23,6 +24,7 @@ const ButtonIconOnly = ({
         borderRadius,
         borderWidth,
         borderColor,
+        shadow,
       )}>
       {icon}
     </TouchableOpacity>
@@ -37,6 +39,7 @@ const styles = StyleSheet.create({
     borderRadius,
     borderWidth,
     borderColor,
+    shadow,
   ) => ({
     height: size ? size : 30,
     width: size ? size : 30,
@@ -47,6 +50,15 @@ const styles = StyleSheet.create({
     padding: padding ? padding : 0,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: shadow && '#000',
+    shadowOffset: shadow && {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: shadow && 0.27,
+    shadowRadius: shadow && 4.65,
+
+    elevation: shadow && 6,
   }),
 });
 

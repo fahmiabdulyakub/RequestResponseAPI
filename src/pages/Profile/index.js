@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Image,
   StatusBar,
@@ -8,11 +8,16 @@ import {
   View,
 } from 'react-native';
 import {BgTop, ICUser} from '../../assets';
-import {Gap} from '../../components';
+import {Gap, ModalAddImage} from '../../components';
 import {colors, fonts, imageFake} from '../../constants';
 import {hp, rf, wp} from '../../constants/display';
+import {openCamera, openPenyimpanan} from '../../utils';
 
 const RegisterEmail = ({navigation}) => {
+  const [modal, setModal] = useState(false);
+  const onImageSaved = savedImage => {
+    setModal(false);
+  };
   return (
     <View style={styles.page}>
       <StatusBar backgroundColor={colors.bg.blue3} />
@@ -23,11 +28,19 @@ const RegisterEmail = ({navigation}) => {
         <Gap height={hp(5)} />
       </View>
       <View style={styles.containerImage}>
-        <TouchableOpacity style={styles.profilePic}>
+        <TouchableOpacity
+          style={styles.profilePic}
+          onPress={() => setModal(true)}>
           <Image source={{uri: imageFake.singleUrl}} style={styles.image} />
           <View style={styles.circle}>{<ICUser />}</View>
         </TouchableOpacity>
       </View>
+      <ModalAddImage
+        onPressCamera={() => openCamera(onImageSaved)}
+        onPressGallery={() => openPenyimpanan(onImageSaved)}
+        isVisible={modal}
+        onPressClose={() => setModal(false)}
+      />
     </View>
   );
 };
