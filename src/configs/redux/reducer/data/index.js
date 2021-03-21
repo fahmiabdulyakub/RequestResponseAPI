@@ -4,6 +4,7 @@ const initialStateRoot = {
   data: [],
   latitude: 0,
   longitude: 0,
+  loading: false,
 };
 
 const dataUser = (state = initialStateRoot, action) => {
@@ -17,6 +18,11 @@ const dataUser = (state = initialStateRoot, action) => {
       return {
         ...state,
         latitude: action.value,
+      };
+    case reducer.LOADING:
+      return {
+        ...state,
+        loading: action.value,
       };
     case reducer.PROFILE_LONGITUDE:
       return {

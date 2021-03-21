@@ -1,5 +1,12 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Modal from 'react-native-modal';
 import {colors, fonts, hp, rf, wp} from '../../../constants';
 
@@ -8,6 +15,7 @@ const ModalOption = ({
   onPressClose,
   onPressItem,
   title,
+  loading,
   data,
   heightModal,
 }) => {
@@ -23,19 +31,25 @@ const ModalOption = ({
       useNativeDriver={true}
       animationOut="zoomOut">
       <View style={styles.container}>
-        <FlatList
-          data={data}
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={item => item.id.toString()}
-          renderItem={({item}) => (
-            <TouchableOpacity
-              style={styles.content}
-              onPress={() => onPressItem(item)}>
-              <Text style={styles.titleSelect}>{item.name}</Text>
-            </TouchableOpacity>
-          )}
-        />
+        {loading ? (
+          <View style={styles.loading}>
+            <ActivityIndicator size="large" color={colors.bg.blue} />
+          </View>
+        ) : (
+          <FlatList
+            data={data}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={item => item.id.toString()}
+            renderItem={({item}) => (
+              <TouchableOpacity
+                style={styles.content}
+                onPress={() => onPressItem(item)}>
+                <Text style={styles.titleSelect}>{item.nama}</Text>
+              </TouchableOpacity>
+            )}
+          />
+        )}
       </View>
     </Modal>
   );
@@ -66,5 +80,10 @@ const styles = StyleSheet.create({
     fontFamily: fonts.MontserratRegular,
     fontSize: rf(2),
     color: colors.text.gray,
+  },
+  loading: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: hp(2),
   },
 });

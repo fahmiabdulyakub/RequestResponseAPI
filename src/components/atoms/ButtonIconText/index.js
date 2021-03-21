@@ -15,6 +15,7 @@ const ButtonIconText = ({
   fontTitle,
   paddingVertical,
   paddingHorizontal,
+  marginHorizontal,
   widthText,
   leftText,
   height,
@@ -28,6 +29,7 @@ const ButtonIconText = ({
         borderRadius,
         paddingVertical,
         paddingHorizontal,
+        marginHorizontal,
         height,
       )}
       onPress={onPress}
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
     borderRadius,
     paddingVertical,
     paddingHorizontal,
+    marginHorizontal,
     height,
   ) => ({
     backgroundColor: backgroundColor ? backgroundColor : colors.bg.blue,
@@ -64,6 +67,7 @@ const styles = StyleSheet.create({
     flexDirection: flexDirection ? flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginHorizontal: marginHorizontal,
   }),
   title: (titleColor, fontTitle, widthText, leftText) => ({
     fontFamily: fontTitle ? fontTitle : fonts.MontserratRegular,
