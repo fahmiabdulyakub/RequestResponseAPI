@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/datetimepicker": "^3.4.0",
+    "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
@@ -23,7 +24,9 @@
     "react-native-camera": "^3.43.0",
     "react-native-dropdown-menu": "^2.0.0",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-get-location": "^2.0.0",
     "react-native-image-picker": "^3.3.2",
+    "react-native-maps": "git+https://github.com/xDemon200/react-native-maps.git",
     "react-native-modal": "^11.6.1",
     "react-native-modal-dropdown": "git+https://github.com/Kishanjvaghela/react-native-modal-dropdown.git",
     "react-native-reanimated": "^2.0.0",

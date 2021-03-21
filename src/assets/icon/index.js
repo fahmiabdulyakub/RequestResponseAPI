@@ -9,6 +9,9 @@ import ICUser from './ICUser.svg';
 import ICCamera from './ICCamera.svg';
 import ICFolder from './ICFolder.svg';
 import ICCancel from './ICCancel.svg';
+import ICUserMap from './ICUserMap.png';
+import ICLocation from './ICLocation.svg';
+import ICBackBlue from './ICBackBlue.svg';
 export {
   ICEmail,
   ICBack,
@@ -21,4 +24,7 @@ export {
   ICCamera,
   ICFolder,
   ICCancel,
+  ICUserMap,
+  ICLocation,
+  ICBackBlue,
 };

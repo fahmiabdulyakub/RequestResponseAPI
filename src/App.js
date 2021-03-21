@@ -6,7 +6,7 @@ import 'moment/locale/id';
 import Toast from 'react-native-toast-message';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {Profile, CreateAccount, PersonalInformation, Schedule} from './pages';
+import {Profile, PersonalInformation, Schedule} from './pages';
 
 const Stack = createStackNavigator();
 
@@ -20,11 +20,6 @@ function App() {
               <Stack.Screen
                 name="Profile"
                 component={Profile}
-                options={{headerShown: false}}
-              />
-              <Stack.Screen
-                name="CreateAccount"
-                component={CreateAccount}
                 options={{headerShown: false}}
               />
               <Stack.Screen

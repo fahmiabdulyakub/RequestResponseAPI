@@ -4,7 +4,7 @@ import Modal from 'react-native-modal';
 import {ICCamera, ICFolder, ICCancel} from '../../../assets';
 import {ButtonIconOnly} from '../../../components';
 import {colors, fonts, hp, rf, wp} from '../../../constants';
-import {Button, Gap} from '../../atoms';
+import {Gap} from '../../atoms';
 
 const ModalAddImage = ({
   isVisible,

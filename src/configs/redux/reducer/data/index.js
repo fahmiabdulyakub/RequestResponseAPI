@@ -2,6 +2,8 @@ import {reducer} from '../../../../constants';
 
 const initialStateRoot = {
   data: [],
+  latitude: 0,
+  longitude: 0,
 };
 
 const dataUser = (state = initialStateRoot, action) => {
@@ -10,6 +12,16 @@ const dataUser = (state = initialStateRoot, action) => {
       return {
         ...state,
         data: action.value,
+      };
+    case reducer.PROFILE_LATITUDE:
+      return {
+        ...state,
+        latitude: action.value,
+      };
+    case reducer.PROFILE_LONGITUDE:
+      return {
+        ...state,
+        longitude: action.value,
       };
     default:
       return state;
