@@ -114,6 +114,7 @@ const Profile = ({navigation}) => {
             borderRadius={wp(10) / 2}
             size={wp(10)}
             onPress={() => getLokasi()}
+            shadow={true}
           />
         </View>
         <Gap height={hp(3)} />

@@ -68,6 +68,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: marginHorizontal,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   }),
   title: (titleColor, fontTitle, widthText, leftText) => ({
     fontFamily: fontTitle ? fontTitle : fonts.MontserratRegular,
